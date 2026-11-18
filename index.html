@@ -63,10 +63,9 @@
 <!-- Floating glass header (sits over the hero) -->
 <header class="site-header">
   <div class="bar">
-    <a class="brand" href="index.html" aria-label="Sri Vishnu Nursing Institutions home">
-      <img data-img="logo.png" alt="" width="48" height="48">
-      <span>Sri Vishnu<small>Nursing Institutions</small></span>
-    </a>
+   <a class="brand" href="index.html" aria-label="Sri Vishnu School and College of Nursing, home">
+  <img src="assets/images/logo.png" alt="Sri Vishnu School and College of Nursing" width="156" height="52">
+</a>
     <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav">
       <span class="nav-toggle__bars" aria-hidden="true"></span><span>Menu</span>
     </button>
@@ -131,7 +130,11 @@
     <button class="hero__tab" role="tab" aria-selected="false" type="button" aria-label="Slide 3"><i></i></button>
   </div>
 </section>
-
+<a class="hero__pill" href="admissions.html">
+  <span class="hero__pulse"></span>
+  <span><strong>Admissions open</strong>B.Sc, P.B.B.Sc, M.Sc and GNM</span>
+  <svg class="i"><use href="#i-arrow"/></svg>
+</a>
 <!-- Quick paths -->
 <section class="quick" aria-label="Quick links">
   <div class="wrap quick__grid" data-stagger>
@@ -261,32 +264,71 @@
       <p class="eyebrow reveal">Facilities</p>
       <h2 class="reveal">Facilities built around a student's day</h2>
     </div>
-    <div class="bento" data-stagger>
-      <article class="tile tile--clin reveal">
-        <img data-img="how-study-img3.jpg" alt="Students at a partner hospital" width="520" height="380" loading="lazy">
-        <div class="tile__body">
-          <span class="tile__ico"><svg class="i"><use href="#i-cross"/></svg></span>
+
+    <div class="fac-grid" data-stagger>
+
+      <a class="fac-card reveal" href="facilities.html#clinical">
+        <img src="assets/images/facility-1.jpg" alt="Students at a partner hospital" width="520" height="650" loading="lazy">
+        <span class="fac-tag">Hands-on</span>
+        <span class="fac-go" aria-hidden="true"><svg class="i"><use href="#i-arrow"/></svg></span>
+        <div class="fac-body">
           <h3>Clinical training</h3>
-          <p>Supervised practice at partner hospitals, with real patients and real teams.</p>
+          <div class="fac-more"><p>Supervised practice at partner hospitals, with real patients and real teams.</p></div>
         </div>
-      </article>
-      <article class="tile tile--lib reveal">
-        <img data-img="how-study-img1.jpg" alt="Library reading hall" width="520" height="380" loading="lazy">
-        <div class="tile__body">
-          <span class="tile__ico"><svg class="i"><use href="#i-book"/></svg></span>
+      </a>
+
+      <a class="fac-card reveal" href="facilities.html#library">
+        <img src="assets/images/facility-2.jpg" alt="Library reading hall" width="520" height="650" loading="lazy">
+        <span class="fac-tag">Study</span>
+        <span class="fac-go" aria-hidden="true"><svg class="i"><use href="#i-arrow"/></svg></span>
+        <div class="fac-body">
           <h3>Library</h3>
-          <p>Books, journals and quiet reading space for coursework and exam preparation.</p>
+          <div class="fac-more"><p>Books, journals and quiet reading space for coursework and exam preparation.</p></div>
         </div>
-      </article>
-      <article class="tile tile--host reveal">
-        <img data-img="how-study-img2.jpg" alt="Hostel room" width="520" height="380" loading="lazy">
-        <div class="tile__body">
-          <span class="tile__ico"><svg class="i"><use href="#i-home"/></svg></span>
+      </a>
+
+      <a class="fac-card reveal" href="facilities.html#hostel">
+        <img src="assets/images/facility-3.jpg" alt="Hostel room" width="520" height="650" loading="lazy">
+        <span class="fac-tag">Stay</span>
+        <span class="fac-go" aria-hidden="true"><svg class="i"><use href="#i-arrow"/></svg></span>
+        <div class="fac-body">
           <h3>Hostel</h3>
-          <p>Separate, secure hostels with vegetarian and non-vegetarian meals and round-the-clock water.</p>
+          <div class="fac-more"><p>Separate, secure hostels for boys and girls, with round-the-clock water supply.</p></div>
         </div>
-      </article>
+      </a>
+
+      <a class="fac-card reveal" href="facilities.html#skills-lab">
+        <img src="assets/images/facility-4.jpg" alt="Nursing skills lab" width="520" height="650" loading="lazy">
+        <span class="fac-tag">Practice</span>
+        <span class="fac-go" aria-hidden="true"><svg class="i"><use href="#i-arrow"/></svg></span>
+        <div class="fac-body">
+          <h3>Skills lab</h3>
+          <div class="fac-more"><p>Practise procedures on models and simulators before you work with patients.</p></div>
+        </div>
+      </a>
+
+      <a class="fac-card reveal" href="facilities.html#dining">
+        <img src="assets/images/facility-5.jpg" alt="Dining hall" width="520" height="650" loading="lazy">
+        <span class="fac-tag">Food</span>
+        <span class="fac-go" aria-hidden="true"><svg class="i"><use href="#i-arrow"/></svg></span>
+        <div class="fac-body">
+          <h3>Dining hall</h3>
+          <div class="fac-more"><p>Nutritious vegetarian and non-vegetarian meals served in a clean dining space.</p></div>
+        </div>
+      </a>
+
+      <a class="fac-card reveal" href="facilities.html#campus">
+        <img src="assets/images/facility-6.jpg" alt="Campus grounds" width="520" height="650" loading="lazy">
+        <span class="fac-tag">Campus</span>
+        <span class="fac-go" aria-hidden="true"><svg class="i"><use href="#i-arrow"/></svg></span>
+        <div class="fac-body">
+          <h3>Campus amenities</h3>
+          <div class="fac-more"><p>Safe drinking water, newspapers, books and a calm campus to study in.</p></div>
+        </div>
+      </a>
+
     </div>
+
     <p class="more reveal"><a class="btn btn-outline" href="facilities.html">All facilities <svg class="i"><use href="#i-arrow"/></svg></a></p>
   </div>
 </section>
@@ -300,28 +342,44 @@
     <div class="stat"><b data-count="2569">2,569</b><span>placements</span></div>
   </div>
 </section>
-
-<!-- Campus -->
-<section class="section" id="campus">
-  <div class="wrap campus">
-    <div class="campus__txt" data-stagger>
-      <p class="eyebrow reveal">Campus life</p>
-      <h2 class="reveal">A campus that feels like home</h2>
-      <p class="reveal">Students come from across India and learn alongside different customs and faiths. We provide nutritious meals, safe drinking water, newspapers and books, so students can focus on learning and manage daily life independently.</p>
-      <ul class="amen reveal">
-        <li><svg class="i"><use href="#i-food"/></svg>Vegetarian and non-vegetarian meals</li>
-        <li><svg class="i"><use href="#i-drop"/></svg>Safe drinking water</li>
-        <li><svg class="i"><use href="#i-news"/></svg>Newspapers and books</li>
-        <li><svg class="i"><use href="#i-clock"/></svg>Round-the-clock water supply</li>
-      </ul>
-      <div class="reveal"><a class="btn btn-forest" href="facilities.html">Explore campus facilities <svg class="i"><use href="#i-arrow"/></svg></a></div>
-    </div>
-    <div class="campus__media reveal">
-      <img data-img="campus-01.jpg" alt="Campus building and grounds" width="640" height="460" loading="lazy">
-    </div>
-  </div>
+<!-- Campus life gallery -->
+<section class="campus-gallery" id="campus" aria-label="Campus life photos">
+  <ul class="cg">
+    <li><img src="assets/images/16.jpg" alt="Campus life photo 1" width="600" height="600" loading="lazy" decoding="async"></li>
+    <li><img src="assets/images/17.jpg" alt="Campus life photo 2" width="600" height="600" loading="lazy" decoding="async"></li>
+    <li><img src="assets/images/18.jpg" alt="Campus life photo 3" width="600" height="600" loading="lazy" decoding="async"></li>
+    <li><img src="assets/images/19.jpg" alt="Campus life photo 4" width="600" height="600" loading="lazy" decoding="async"></li>
+    <li><img src="assets/images/20.jpg" alt="Campus life photo 5" width="600" height="600" loading="lazy" decoding="async"></li>
+    <li><img src="assets/images/21.jpg" alt="Campus life photo 6" width="600" height="600" loading="lazy" decoding="async"></li>
+    <li><img src="assets/images/22.jpg" alt="Campus life photo 7" width="600" height="600" loading="lazy" decoding="async"></li>
+    <li><img src="assets/images/23.jpg" alt="Campus life photo 8" width="600" height="600" loading="lazy" decoding="async"></li>
+    <li><img src="assets/images/24.jpg" alt="Campus life photo 9" width="600" height="600" loading="lazy" decoding="async"></li>
+    <li><img src="assets/images/25.jpg" alt="Campus life photo 10" width="600" height="600" loading="lazy" decoding="async"></li>
+    <li><img src="assets/images/26.jpg" alt="Campus life photo 11" width="600" height="600" loading="lazy" decoding="async"></li>
+    <li><img src="assets/images/27.jpg" alt="Campus life photo 12" width="600" height="600" loading="lazy" decoding="async"></li>
+    <li><img src="assets/images/28.jpg" alt="Campus life photo 13" width="600" height="600" loading="lazy" decoding="async"></li>
+    <li><img src="assets/images/29.jpg" alt="Campus life photo 14" width="600" height="600" loading="lazy" decoding="async"></li>
+    <li><img src="assets/images/30.jpg" alt="Campus life photo 15" width="600" height="600" loading="lazy" decoding="async"></li>
+    <li><img src="assets/images/31.jpg" alt="Campus life photo 16" width="600" height="600" loading="lazy" decoding="async"></li>
+    <li><img src="assets/images/32.jpg" alt="Campus life photo 17" width="600" height="600" loading="lazy" decoding="async"></li>
+    <li><img src="assets/images/33.jpg" alt="Campus life photo 18" width="600" height="600" loading="lazy" decoding="async"></li>
+    <li><img src="assets/images/34.jpg" alt="Campus life photo 19" width="600" height="600" loading="lazy" decoding="async"></li>
+    <li><img src="assets/images/35.jpg" alt="Campus life photo 20" width="600" height="600" loading="lazy" decoding="async"></li>
+    <li><img src="assets/images/36.jpg" alt="Campus life photo 21" width="600" height="600" loading="lazy" decoding="async"></li>
+    <li><img src="assets/images/37.jpg" alt="Campus life photo 22" width="600" height="600" loading="lazy" decoding="async"></li>
+    <li><img src="assets/images/38.jpg" alt="Campus life photo 23" width="600" height="600" loading="lazy" decoding="async"></li>
+    <li><img src="assets/images/39.jpg" alt="Campus life photo 24" width="600" height="600" loading="lazy" decoding="async"></li>
+    <li><img src="assets/images/40.jpg" alt="Campus life photo 25" width="600" height="600" loading="lazy" decoding="async"></li>
+    <li><img src="assets/images/41.jpg" alt="Campus life photo 26" width="600" height="600" loading="lazy" decoding="async"></li>
+    <li><img src="assets/images/42.jpg" alt="Campus life photo 27" width="600" height="600" loading="lazy" decoding="async"></li>
+    <li><img src="assets/images/43.jpg" alt="Campus life photo 28" width="600" height="600" loading="lazy" decoding="async"></li>
+    <li><img src="assets/images/44.jpg" alt="Campus life photo 29" width="600" height="600" loading="lazy" decoding="async"></li>
+    <li><img src="assets/images/45.jpg" alt="Campus life photo 30" width="600" height="600" loading="lazy" decoding="async"></li>
+    <li><img src="assets/images/46.jpg" alt="Campus life photo 31" width="1200" height="600" loading="lazy" decoding="async"></li>
+  </ul>
 </section>
 
+<!-- Partners -->
 <!-- Partners -->
 <section class="section section--mist partners" id="partners">
   <div class="wrap">
@@ -402,10 +460,9 @@
 <footer class="footer">
   <div class="wrap foot-grid">
     <div>
-      <a class="brand brand--foot" href="index.html" aria-label="Sri Vishnu Nursing Institutions home">
-        <img data-img="logo.png" alt="" width="48" height="48">
-        <span>Sri Vishnu<small>Nursing Institutions</small></span>
-      </a>
+    <a class="brand brand--foot" href="index.html" aria-label="Sri Vishnu School and College of Nursing, home">
+  <img src="assets/images/logo.png" alt="Sri Vishnu School and College of Nursing" width="190" height="63">
+</a>
       <p>Managed by Sri Vinayaka Education Trust. Affiliated to Rajiv Gandhi University of Health Sciences, Bengaluru.</p>
       <ul class="social" aria-label="Follow us on social media">
         <!-- Replace each "#" with the real profile URL. -->

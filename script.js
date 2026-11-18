@@ -1,3 +1,12 @@
+document.querySelectorAll(".marquee__track").forEach((track) => {
+  const group = track.querySelector(".marquee__group");
+  if (!group) return;
+  const clone = group.cloneNode(true);
+  clone.setAttribute("aria-hidden", "true");
+  clone.querySelectorAll("img").forEach((img) => { img.alt = ""; });
+  track.appendChild(clone);
+});
+
 /* ------------------------------------------------------------
    IMAGES
    Every <img data-img="name.jpg"> loads from images/name.jpg.
@@ -5,7 +14,7 @@
    it replaces the placeholder. Until then, the image is loaded
    from the current svet.ac.in site (or data-fallback if set).
    ------------------------------------------------------------ */
-const LOCAL_DIR = "images/";
+const LOCAL_DIR = "assets/images/";
 const LIVE_DIR = "https://svet.ac.in/images/";
 
 document.querySelectorAll("img[data-img]").forEach((img) => {
@@ -151,16 +160,7 @@ nav.querySelectorAll("a").forEach((a) => a.addEventListener("click", closeMenu))
 })();
 
 /* ------------------------------------------------------------
-   MARQUEES: duplicate the group once so the loop is seamless
-   ------------------------------------------------------------ */
-document.querySelectorAll(".marquee__track").forEach((track) => {
-  const group = track.querySelector(".marquee__group");
-  if (!group) return;
-  const clone = group.cloneNode(true);
-  clone.setAttribute("aria-hidden", "true");
-  clone.querySelectorAll("img").forEach((img) => { img.alt = ""; });
-  track.appendChild(clone);
-});
+   
 
 /* ------------------------------------------------------------
    SCROLL REVEAL (content is visible by default without JS)
