@@ -510,3 +510,8 @@ address{font-style:normal}
 }
 @media (max-width:900px){.fac-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media (max-width:560px){.fac-grid{grid-template-columns:1fr}}
+/* Campus events heading */
+.campus-gallery{padding-top:clamp(4rem,9vw,7rem)}
+.cg-head{margin-bottom:2.2rem}
+.cg-head h2{max-width:24ch}
+.cg-head p:not(.eyebrow){color:var(--muted);margin:0}
