@@ -94,7 +94,7 @@ nav.querySelectorAll("a").forEach((a) => a.addEventListener("click", closeMenu))
 
   const slides = [...hero.querySelectorAll(".hero__slide")];
   const tabs = [...hero.querySelectorAll(".hero__tab")];
-  const INTERVAL = 6500;
+  const INTERVAL = 3000;
   let current = 0;
   let timer = null;
 
@@ -194,20 +194,36 @@ nav.querySelectorAll("a").forEach((a) => a.addEventListener("click", closeMenu))
 (function () {
   const stats = document.querySelector(".stats");
   if (!stats || reduceMotion || !("IntersectionObserver" in window)) return;
+
+  const counters = [...stats.querySelectorAll("[data-count]")];
+  const DURATION = 1000;                 // total time in ms
+  const fmt = (n) => n.toLocaleString("en-IN");
+
+  // start every counter at 0 before it is scrolled into view
+  counters.forEach((el) => { el.textContent = "0" + (el.dataset.suffix || ""); });
+
   const io = new IntersectionObserver((entries) => {
     if (!entries[0].isIntersecting) return;
     io.disconnect();
-    stats.querySelectorAll("[data-count]").forEach((el) => {
+
+    counters.forEach((el) => {
       const end = +el.dataset.count;
+      const suffix = el.dataset.suffix || "";
+      const step = +el.dataset.step || (end >= 500 ? 100 : 1);
       const start = performance.now();
-      const dur = 1500;
+
       (function tick(now) {
-        const t = Math.min((now - start) / dur, 1);
-        el.textContent = Math.round(end * (1 - Math.pow(1 - t, 3))).toLocaleString("en-IN");
-        if (t < 1) requestAnimationFrame(tick);
+        const t = Math.min((now - start) / DURATION, 1);
+        if (t < 1) {
+          el.textContent = fmt(Math.floor((end * t) / step) * step) + suffix;
+          requestAnimationFrame(tick);
+        } else {
+          el.textContent = fmt(end) + suffix;   // lands exactly, e.g. 4,560+
+        }
       })(start);
     });
-  }, { threshold: 0.4 });
+  }, { threshold: 0.5 });
+
   io.observe(stats);
 })();
 

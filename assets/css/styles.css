@@ -337,61 +337,7 @@ address{font-style:normal}
   .marquee__group{flex-wrap:wrap;row-gap:1rem}
   .marquee__group[aria-hidden="true"]{display:none}
 }
-/* Facilities: six equal cards, three per row */
-.fac-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.4rem}
 
-.fac-card{
-  position:relative;display:block;isolation:isolate;overflow:hidden;
-  aspect-ratio:4/5;border-radius:22px;color:#fff;text-decoration:none;
-  background:var(--deep,#0A2A30);
-  width: 300px;height: 300px;box-shadow:0 12px 34px -16px rgba(6,32,26,.45);
-}
-.fac-card img{
-  position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:-2;
-  transition:transform .6s cubic-bezier(.2,.7,.2,1);
-}
-/* dark fade so text stays readable on any photo */
-.fac-card::after{
-  content:"";position:absolute;inset:0;z-index:-1;
-  background:linear-gradient(to top,rgba(10,42,48,.92) 0%,rgba(10,42,48,.45) 45%,rgba(10,42,48,0) 75%);
-  transition:background .4s;
-}
-.fac-tag{
-  position:absolute;top:1rem;left:1rem;padding:.3em .85em;border-radius:999px;
-  font-size:.82rem;font-weight:600;
-  background:rgba(255,255,255,.16);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);
-  border:1px solid rgba(255,255,255,.28);
-}
-.fac-go{
-  position:absolute;top:1rem;right:1rem;width:42px;height:42px;border-radius:50%;
-  display:grid;place-items:center;background:#fff;color:var(--deep,#0A2A30);
-  transform:rotate(-45deg);transition:transform .35s,background .35s;
-}
-.fac-go .i{width:18px;height:18px}
-.fac-body{position:absolute;left:0;right:0;bottom:0;padding:1.4rem 1.4rem 1.5rem}
-.fac-body h3{margin:0;font-size:1.35rem;color:#fff}
-
-/* description slides open on hover / focus */
-.fac-more{display:grid;grid-template-rows:0fr;transition:grid-template-rows .4s ease}
-.fac-more p{overflow:hidden;margin:0;font-size:.97rem;line-height:1.5;color:#E3EEEC;opacity:0;transition:opacity .3s,margin .4s}
-.fac-card:hover .fac-more,.fac-card:focus-visible .fac-more{grid-template-rows:1fr}
-.fac-card:hover .fac-more p,.fac-card:focus-visible .fac-more p{opacity:1;margin-top:.6rem}
-.fac-card:hover img,.fac-card:focus-visible img{transform:scale(1.07)}
-.fac-card:hover .fac-go,.fac-card:focus-visible .fac-go{transform:rotate(0);background:var(--gold,#F4B63F)}
-.fac-card:hover::after{background:linear-gradient(to top,rgba(10,42,48,.96) 0%,rgba(10,42,48,.7) 60%,rgba(10,42,48,.15) 100%)}
-
-/* touch screens have no hover, so always show the description */
-@media (hover:none){
-  .fac-more{grid-template-rows:1fr}
-  .fac-more p{opacity:1;margin-top:.6rem}
-  .fac-go{transform:rotate(0)}
-}
-
-@media (max-width:900px){.fac-grid{grid-template-columns:repeat(2,1fr)}}
-@media (max-width:560px){.fac-grid{grid-template-columns:1fr}.fac-card{aspect-ratio:4/4.2}}
-@media (prefers-reduced-motion:reduce){
-  .fac-card img,.fac-more,.fac-more p,.fac-go{transition:none}
-}
 .hero__slide{transition:opacity .9s ease}
 .hero__slide img{transition:transform 4s linear}
 .hero__tab.is-active i::after{animation:fill var(--dur,3s) linear forwards}
@@ -418,25 +364,7 @@ address{font-style:normal}
   radial-gradient(700px 360px at 8% 0%,rgba(201,162,74,.16),transparent 65%),
   radial-gradient(700px 400px at 100% 100%,rgba(18,80,60,.12),transparent 65%),
   var(--mist)}
-  /* Facilities: 6 equal cards, tight gaps */
-.fac-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:.7rem}
-.fac-card{position:relative;display:block;isolation:isolate;overflow:hidden;aspect-ratio:4/5;border-radius:22px;color:#fff;text-decoration:none;background:var(--forest)}
-.fac-card img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:-2;transition:transform .7s var(--ease)}
-.fac-card::after{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(0deg,rgba(6,32,26,.9) 0%,rgba(6,32,26,.35) 45%,transparent 75%);transition:background .4s}
-.fac-tag{position:absolute;top:1rem;left:1rem;padding:.3em .85em;border-radius:999px;font-size:.82rem;font-weight:600;background:rgba(255,255,255,.16);border:1px solid rgba(255,255,255,.3);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px)}
-.fac-go{position:absolute;top:1rem;right:1rem;display:grid;place-items:center;width:42px;height:42px;border-radius:50%;background:#fff;color:var(--deep);transform:rotate(-45deg);transition:transform .35s var(--ease),background .35s}
-.fac-body{position:absolute;left:0;right:0;bottom:0;padding:1.4rem}
-.fac-body h3{margin:0;font-size:1.4rem;color:#fff}
-.fac-more{display:grid;grid-template-rows:0fr;transition:grid-template-rows .4s ease}
-.fac-more p{overflow:hidden;margin:0;font-size:.96rem;line-height:1.5;color:#e3eeec;opacity:0;transition:opacity .3s,margin .4s}
-.fac-card:hover .fac-more,.fac-card:focus-visible .fac-more{grid-template-rows:1fr}
-.fac-card:hover .fac-more p,.fac-card:focus-visible .fac-more p{opacity:1;margin-top:.6rem}
-.fac-card:hover img,.fac-card:focus-visible img{transform:scale(1.07)}
-.fac-card:hover .fac-go,.fac-card:focus-visible .fac-go{transform:none;background:var(--gold)}
-.fac-card:hover::after{background:linear-gradient(0deg,rgba(6,32,26,.96) 0%,rgba(6,32,26,.7) 60%,rgba(6,32,26,.15) 100%)}
-@media (hover:none){.fac-more{grid-template-rows:1fr}.fac-more p{opacity:1;margin-top:.6rem}.fac-go{transform:none}}
-@media (max-width:900px){.fac-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
-@media (max-width:560px){.fac-grid{grid-template-columns:1fr}.fac-card{aspect-ratio:4/4.4}}
+
 /* Campus life */
 .campus-head{display:grid;gap:2rem;align-items:end;margin-bottom:2.5rem}
 .campus-head p:not(.eyebrow){color:var(--muted)}
@@ -496,22 +424,167 @@ address{font-style:normal}
   .cg li:last-child{grid-column:span 2;aspect-ratio:2/1}
 }
 @media (prefers-reduced-motion:reduce){.cg img{transition:none}}
-/* Facilities: 10px gap between cards */
-.fac-grid{
-  display:grid;
-  grid-template-columns:repeat(3,minmax(0,1fr));
-  gap:10px;
-}
-.fac-card{
-  width:auto;
-  height:auto;
-  aspect-ratio:4/5;
-  margin:0;
-}
-@media (max-width:900px){.fac-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
-@media (max-width:560px){.fac-grid{grid-template-columns:1fr}}
+
 /* Campus events heading */
 .campus-gallery{padding-top:clamp(4rem,9vw,7rem)}
 .cg-head{margin-bottom:2.2rem}
 .cg-head h2{max-width:24ch}
 .cg-head p:not(.eyebrow){color:var(--muted);margin:0}
+/* ===== 1. Smaller gaps between sections ===== */
+:root{--gap:clamp(1.25rem,3vw,2.25rem)}   /* 20px phone, 36px laptop */
+
+.section{padding:var(--gap) 0}
+.campus-gallery{padding-top:var(--gap);padding-bottom:0}
+.approvals{padding:1rem 0 0}
+.cta{padding:0}
+.news{margin-top:1.5rem}
+.head{margin-bottom:1.2rem}
+.cg-head{margin-bottom:1.2rem}
+.more{margin-top:.4rem}
+.footer{padding-top:2.5rem}
+
+/* ===== 2. Shorter stats strip ===== */
+.numbers{padding:.9rem 0}
+.stats{gap:.8rem 1rem}
+.stat{padding-left:.9rem}
+.stat b{font-size:clamp(1.9rem,4vw,2.8rem)}
+.stat span{margin-top:.2rem;font-size:.9rem}
+
+/* ===== 3. Facilities: small cards like the gallery ===== */
+:root{--fac-cols:6;--fac-ratio:4/5;--fac-gap:6px}   /* change --fac-cols to 3 for bigger cards */
+
+.fac-grid{display:grid;grid-template-columns:repeat(var(--fac-cols),minmax(0,1fr));gap:var(--fac-gap)}
+.fac-card{position:relative;display:block;isolation:isolate;overflow:hidden;aspect-ratio:var(--fac-ratio);border-radius:16px;color:#fff;text-decoration:none;background:var(--forest)}
+.fac-card img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:-2;transition:transform .6s var(--ease)}
+.fac-card::after{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(0deg,rgba(6,32,26,.9) 0%,rgba(6,32,26,.3) 50%,transparent 80%);transition:background .4s}
+.fac-tag{position:absolute;top:.6rem;left:.6rem;padding:.25em .7em;border-radius:999px;font-size:.72rem;font-weight:600;background:rgba(255,255,255,.16);border:1px solid rgba(255,255,255,.3);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px)}
+.fac-go{position:absolute;top:.6rem;right:.6rem;display:grid;place-items:center;width:32px;height:32px;border-radius:50%;background:#fff;color:var(--deep);transform:rotate(-45deg);transition:transform .35s var(--ease),background .35s}
+.fac-go .i{width:15px;height:15px}
+.fac-body{position:absolute;left:0;right:0;bottom:0;padding:.9rem}
+.fac-body h3{margin:0;font-size:1.05rem;color:#fff}
+.fac-more{display:grid;grid-template-rows:0fr;transition:grid-template-rows .4s ease}
+.fac-more p{overflow:hidden;margin:0;font-size:.82rem;line-height:1.45;color:#e3eeec;opacity:0;transition:opacity .3s,margin .4s}
+.fac-card:hover .fac-more,.fac-card:focus-visible .fac-more{grid-template-rows:1fr}
+.fac-card:hover .fac-more p,.fac-card:focus-visible .fac-more p{opacity:1;margin-top:.4rem}
+.fac-card:hover img,.fac-card:focus-visible img{transform:scale(1.07)}
+.fac-card:hover .fac-go,.fac-card:focus-visible .fac-go{transform:none;background:var(--gold)}
+.fac-card:hover::after{background:linear-gradient(0deg,rgba(6,32,26,.96) 0%,rgba(6,32,26,.7) 60%,rgba(6,32,26,.15) 100%)}
+
+@media (max-width:1099px){:root{--fac-cols:3}}
+@media (max-width:560px){:root{--fac-cols:2}}
+@media (hover:none){.fac-go{transform:none}}
+@media (hover:none) and (min-width:700px){.fac-more{grid-template-rows:1fr}.fac-more p{opacity:1;margin-top:.4rem}}
+/* ===== Facilities: 6 in one row on desktop, 1 per row on mobile ===== */
+:root{
+  --fac-cols:6;          /* cards per row on desktop */
+  --fac-gap:10px;        /* space between cards */
+  --fac-ratio:3/4;       /* card shape: width / height */
+}
+
+.fac-grid{
+  display:grid;
+  grid-template-columns:repeat(var(--fac-cols),minmax(0,1fr));
+  gap:var(--fac-gap);
+}
+
+.fac-card{
+  position:relative;
+  display:block;
+  isolation:isolate;
+  overflow:hidden;
+  width:100%;
+  aspect-ratio:var(--fac-ratio);
+  border-radius:16px;
+  color:#fff;
+  text-decoration:none;
+  background:var(--forest);
+}
+.fac-card img{
+  position:absolute;
+  inset:0;
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  z-index:-2;
+  transition:transform .6s var(--ease);
+}
+.fac-card::after{
+  content:"";
+  position:absolute;
+  inset:0;
+  z-index:-1;
+  background:linear-gradient(0deg,rgba(6,32,26,.92) 0%,rgba(6,32,26,.3) 50%,transparent 80%);
+  transition:background .4s;
+}
+
+.fac-tag{
+  position:absolute;
+  top:.6rem;
+  left:.6rem;
+  padding:.25em .7em;
+  border-radius:999px;
+  font-size:.72rem;
+  font-weight:600;
+  background:rgba(255,255,255,.16);
+  border:1px solid rgba(255,255,255,.3);
+  backdrop-filter:blur(8px);
+  -webkit-backdrop-filter:blur(8px);
+}
+.fac-go{
+  position:absolute;
+  top:.6rem;
+  right:.6rem;
+  display:grid;
+  place-items:center;
+  width:32px;
+  height:32px;
+  border-radius:50%;
+  background:#fff;
+  color:var(--deep);
+  transform:rotate(-45deg);
+  transition:transform .35s var(--ease),background .35s;
+}
+.fac-go .i{width:15px;height:15px}
+
+.fac-body{position:absolute;left:0;right:0;bottom:0;padding:.9rem}
+.fac-body h3{margin:0;font-size:1.05rem;line-height:1.2;color:#fff}
+
+/* description opens on hover (desktop) */
+.fac-more{display:grid;grid-template-rows:0fr;transition:grid-template-rows .4s ease}
+.fac-more p{
+  overflow:hidden;
+  margin:0;
+  font-size:.82rem;
+  line-height:1.45;
+  color:#e3eeec;
+  opacity:0;
+  transition:opacity .3s,margin .4s;
+}
+.fac-card:hover .fac-more,
+.fac-card:focus-visible .fac-more{grid-template-rows:1fr}
+.fac-card:hover .fac-more p,
+.fac-card:focus-visible .fac-more p{opacity:1;margin-top:.4rem}
+.fac-card:hover img,
+.fac-card:focus-visible img{transform:scale(1.07)}
+.fac-card:hover .fac-go,
+.fac-card:focus-visible .fac-go{transform:none;background:var(--gold)}
+.fac-card:hover::after{background:linear-gradient(0deg,rgba(6,32,26,.96) 0%,rgba(6,32,26,.72) 60%,rgba(6,32,26,.15) 100%)}
+
+/* Tablet: 3 per row */
+@media (max-width:1099px){
+  :root{--fac-cols:3}
+}
+
+/* Mobile: 1 per row, description always visible */
+@media (max-width:640px){
+  :root{--fac-cols:1;--fac-ratio:4/3}
+  .fac-body{padding:1.1rem}
+  .fac-body h3{font-size:1.3rem}
+  .fac-more{grid-template-rows:1fr}
+  .fac-more p{opacity:1;margin-top:.4rem;font-size:.92rem}
+  .fac-go{transform:none}
+}
+
+@media (prefers-reduced-motion:reduce){
+  .fac-card img,.fac-more,.fac-more p,.fac-go{transition:none}
+}
