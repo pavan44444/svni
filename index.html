@@ -20,6 +20,7 @@
 <svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
   <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></symbol>
   <symbol id="i-arrow-ur" viewBox="0 0 24 24"><path d="M7 17 17 7M7 7h10v10"/></symbol>
+  <symbol id="i-calendar" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></symbol>
   <symbol id="i-left" viewBox="0 0 24 24"><path d="m15 18-6-6 6-6"/></symbol>
   <symbol id="i-right" viewBox="0 0 24 24"><path d="m9 18 6-6-6-6"/></symbol>
   <symbol id="i-phone" viewBox="0 0 24 24"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/></symbol>
@@ -107,7 +108,7 @@
 
   <div class="hero__slides">
     <figure class="hero__slide is-active" role="group" aria-roledescription="slide" aria-label="1 of 3">
-      <img src="assets/images/banner-1.jpg" width="2400" height="1000" alt="Sri Vishnu Nursing Institutions college building" fetchpriority="high" decoding="async">
+      <img src="assets/images/banner-1.png" width="2400" height="1000" alt="Sri Vishnu Nursing Institutions college building" fetchpriority="high" decoding="async">
       <figcaption class="hero__caption">A Campus Built for Nursing Excellence</figcaption>
     </figure>
     <figure class="hero__slide" role="group" aria-roledescription="slide" aria-label="2 of 3">
@@ -173,13 +174,13 @@
 <!-- About -->
 <section class="section" id="about">
   <div class="wrap about">
-    <div class="about__media reveal">
-      <img data-img="about-collage.jpg" alt="Students and faculty on the S.V. campus" width="620" height="520" loading="lazy">
-      <div class="about__badge">
-        <svg class="i"><use href="#i-cross"/></svg>
-        <span><strong>Sri Vinayaka Education Trust®</strong>Managing trust</span>
-      </div>
-    </div>
+   <div class="about__media reveal">
+  <img src="assets/images/nursing-1.png" alt="Nursing students and faculty at Sri Vishnu Nursing Institutions" width="1200" height="1000" loading="lazy">
+  <div class="about__badge">
+    <svg class="i"><use href="#i-cross"/></svg>
+    <span><strong>Sri Vinayaka Education Trust®</strong>Managing trust</span>
+  </div>
+</div>
     <div class="about__txt" data-stagger>
       <p class="eyebrow reveal">About us</p>
       <h2 class="reveal">Welcome to S.V. Nursing Institutions</h2>
@@ -197,13 +198,31 @@
 
   <div class="wrap">
     <div class="news reveal">
-      <h3><svg class="i"><use href="#i-news"/></svg>Latest news</h3>
-      <ul>
-        <li><a href="http://svet.ac.in/blog-details.php?id=31">KSDNEB timetable<svg class="i"><use href="#i-arrow-ur"/></svg></a></li>
-        <li><a href="http://svet.ac.in/blog-details.php?id=30">Download our prospectus<svg class="i"><use href="#i-arrow-ur"/></svg></a></li>
-        <li><a href="http://svet.ac.in/blog-details.php?id=29">Admissions open: call 96636 30666<svg class="i"><use href="#i-arrow-ur"/></svg></a></li>
-      </ul>
-    </div>
+  <h3><svg class="i"><use href="#i-news"/></svg>Latest news</h3>
+  <ul>
+    <li>
+      <a href="http://svet.ac.in/blog-details.php?id=31">
+        <span class="news__ico"><svg class="i"><use href="#i-calendar"/></svg></span>
+        <span class="news__txt">KSDNEB timetable</span>
+        <svg class="i news__go"><use href="#i-arrow-ur"/></svg>
+      </a>
+    </li>
+    <li>
+      <a href="http://svet.ac.in/blog-details.php?id=30">
+        <span class="news__ico"><svg class="i"><use href="#i-download"/></svg></span>
+        <span class="news__txt">Download our prospectus</span>
+        <svg class="i news__go"><use href="#i-arrow-ur"/></svg>
+      </a>
+    </li>
+    <li>
+      <a href="http://svet.ac.in/blog-details.php?id=29">
+        <span class="news__ico"><svg class="i"><use href="#i-phone"/></svg></span>
+        <span class="news__txt">Admissions open:  96636 30666</span>
+        <svg class="i news__go"><use href="#i-arrow-ur"/></svg>
+      </a>
+    </li>
+  </ul>
+</div>
   </div>
 </section>
 
@@ -215,45 +234,43 @@
       <h2 class="reveal">Four programmes, one pathway from GNM to M.Sc</h2>
       <p class="reveal">Each course is affiliated to RGUHS and recognised by the Indian Nursing Council.</p>
     </div>
-    <div class="pgrid" data-stagger>
-      <a class="pcard reveal" href="master-nursing.html">
-        <img data-img="course-img1.jpg" alt="M.Sc Nursing students in a seminar" width="480" height="360" loading="lazy">
-        <span class="pcard__level">Postgraduate</span>
-        <div class="pcard__body">
-          <h3>Master of Nursing</h3>
-          <p>Advanced study in clinical specialities, research and nursing leadership.</p>
-          <span class="pcard__more">Explore programme <svg class="i"><use href="#i-arrow"/></svg></span>
-        </div>
-      </a>
-      <a class="pcard reveal" href="post-basic-degree-nursing.html">
-        <img data-img="course-img2.jpg" alt="Post basic nursing students on a ward round" width="480" height="360" loading="lazy">
-        <span class="pcard__level">Post basic degree</span>
-        <div class="pcard__body">
-          <h3>Post Basic Degree in Nursing</h3>
-          <p>A degree route for GNM-qualified nurses, awarded by RGUHS.</p>
-          <span class="pcard__more">Explore programme <svg class="i"><use href="#i-arrow"/></svg></span>
-        </div>
-      </a>
-      <a class="pcard reveal" href="bachelor-nursing.html">
-        <img data-img="course-img3.jpg" alt="B.Sc Nursing students with a patient simulator" width="480" height="360" loading="lazy">
-        <span class="pcard__level">Undergraduate</span>
-        <div class="pcard__body">
-          <h3>Bachelor of Nursing</h3>
-          <p>Four years of training for care in hospitals, community and day-care settings.</p>
-          <span class="pcard__more">Explore programme <svg class="i"><use href="#i-arrow"/></svg></span>
-        </div>
-      </a>
-      <a class="pcard reveal" href="general-nursing.html">
-        <img data-img="course-img4.jpg" alt="GNM students practising midwifery skills" width="480" height="360" loading="lazy">
-        <span class="pcard__level">Diploma</span>
-        <div class="pcard__body">
-          <h3>General Nursing and Midwifery</h3>
-          <p>Practical training to work alongside doctors and specialist teams.</p>
-          <span class="pcard__more">Explore programme <svg class="i"><use href="#i-arrow"/></svg></span>
-        </div>
-      </a>
+   <div class="pgrid" data-stagger>
+  <a class="pcard reveal" href="master-nursing.html">
+    <img src="assets/images/course-1.jpg" alt="M.Sc Nursing students in a seminar" width="800" height="1000" loading="lazy">
+    <span class="pcard__level">Postgraduate</span>
+    <div class="pcard__body">
+      <h3>Master of Nursing</h3>
+      <p>Advanced study in clinical specialities, research and nursing leadership.</p>
+      <span class="pcard__more">Explore programme <svg class="i"><use href="#i-arrow"/></svg></span>
     </div>
+  </a>
+  <a class="pcard reveal" href="post-basic-degree-nursing.html">
+    <img src="assets/images/course-2.jpg" alt="Post basic nursing students on a ward round" width="800" height="1000" loading="lazy">
+    <span class="pcard__level">Post basic degree</span>
+    <div class="pcard__body">
+      <h3>Post Basic Degree in Nursing</h3>
+      <p>A degree route for GNM-qualified nurses, awarded by RGUHS.</p>
+      <span class="pcard__more">Explore programme <svg class="i"><use href="#i-arrow"/></svg></span>
+    </div>
+  </a>
+  <a class="pcard reveal" href="bachelor-nursing.html">
+    <img src="assets/images/course-3.jpg" alt="B.Sc Nursing students with a patient simulator" width="800" height="1000" loading="lazy">
+    <span class="pcard__level">Undergraduate</span>
+    <div class="pcard__body">
+      <h3>Bachelor of Nursing</h3>
+      <p>Four years of training for care in hospitals, community and day-care settings.</p>
+      <span class="pcard__more">Explore programme <svg class="i"><use href="#i-arrow"/></svg></span>
+    </div>
+  </a>
+ <a class="pcard reveal" href="general-nursing.html">
+  <img src="assets/images/course-4.jpg" alt="GNM students practising midwifery skills" width="800" height="1000" loading="lazy">
+  <span class="pcard__level">Diploma</span>
+  <div class="pcard__body">
+    <h3>General Nursing and Midwifery</h3>
+    <p>Practical training to work alongside doctors and specialist teams.</p>
+    <span class="pcard__more">Explore programme <svg class="i"><use href="#i-arrow"/></svg></span>
   </div>
+</a>
 </section>
 
 <!-- Facilities -->
