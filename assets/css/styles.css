@@ -176,7 +176,7 @@ address{font-style:normal}
 .about{display:grid;grid-template-columns:minmax(0,1fr);gap:3rem;align-items:center}
 .about__media{position:relative}
 .about__media img{width:100%;aspect-ratio:6/5;object-fit:cover;border-radius:var(--r-lg);box-shadow:var(--shadow)}
-.about__media::before{content:"";position:absolute;inset:-14px 14px 14px -14px;border:2px solid var(--gold);border-radius:var(--r-lg);z-index:-1;opacity:.6}
+
 .about__badge{position:absolute;right:-.5rem;bottom:-1.4rem;display:flex;align-items:center;gap:.8rem;padding:.9rem 1.2rem;background:var(--forest);color:#fff;border-radius:18px;box-shadow:var(--shadow);font-size:.82rem;line-height:1.35}
 .about__badge .i{width:26px;height:26px;color:var(--gold-2)}
 .about__badge strong{display:block;font:600 .98rem var(--head)}
